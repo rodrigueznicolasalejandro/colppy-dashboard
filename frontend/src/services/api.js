@@ -1,11 +1,13 @@
-export async function fetchMetrics() {
-  const res = await fetch('https://colppy-dashboard-gn8g.vercel.app/metrics')
+const API_URL = import.meta.env.VITE_API_URL
+
+export async function fetchMetrics(days = 30) {
+  const res = await fetch(`${API_URL}/metrics?days=${days}`)
   if (!res.ok) throw new Error('API error')
   return res.json()
 }
 
 export async function fetchKpis() {
-  const res = await fetch('https://colppy-dashboard-gn8g.vercel.app/kpis')
+  const res = await fetch(`${API_URL}/kpis`)
   if (!res.ok) throw new Error('API error')
   return res.json()
 }
