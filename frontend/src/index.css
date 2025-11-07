@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+.colppy-primary {
+  background-color: #6633CC;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #63c, #7d42e6 50%, #a15bff) !important;
+}
+
+.header-primary {
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+button {
+  background-color: #6633CC;
+  color: #fff;
+}
