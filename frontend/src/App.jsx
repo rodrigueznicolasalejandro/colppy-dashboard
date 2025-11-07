@@ -4,9 +4,11 @@ import KpiCard from './components/KpiCard'
 import LineChart from './components/LineChart'
 import Loading from './components/Loading'
 import Message from './components/Message'
+import DateRangeFilter  from "./components/DateRangeFilter"
 
 import usePolling from './hooks/usePolling'
 import { fetchMetrics, fetchKpis } from './services/api'
+import { useFilter } from './context/FilterContext'
 
 export default function App() {
   const [kpis, setKpis] = useState({ activeUsers: 0, revenue: 0, churn: 0 })
@@ -14,10 +16,12 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  const { days } = useFilter()
+
   const update = useCallback(async () => { // Deja en meomria la función para que no se vuelva a crear en cada render
     setError(null)
     try {
-      const { series: newSeries } = await fetchMetrics()
+      const { series: newSeries } = await fetchMetrics(days)
       const { kpis: newKpis } = await fetchKpis()
       setKpis(newKpis)
       setSeries(newSeries)
@@ -26,12 +30,12 @@ export default function App() {
       setError(e.message)
       setLoading(false)
     }
-  }, [])
+  }, [days])
 
   usePolling(update, 5000)
 
   const churnWarning = useMemo(() => kpis.churn > 5, [kpis.churn])
-  const seriesForChart = useMemo(() => series.map(s => ({ ...s, ts: new Date(s.ts).toLocaleTimeString() })), [series])
+  const seriesForChart = useMemo(() => series.map(s => ({ ...s, ts: new Date(s.ts).toDateString() })), [series])
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -51,6 +55,7 @@ export default function App() {
           <KpiCard title="Ingresos (USD)" value={kpis.revenue.toFixed(2)} prefix="$" />
           <KpiCard title="Churn (%)" value={kpis.churn.toFixed(2)} suffix="%" warning={churnWarning} />
         </section>
+        <DateRangeFilter />
         <section className="bg-white p-4 rounded-2xl shadow-sm">
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-lg font-medium">Evolución (últimos puntos)</h2>

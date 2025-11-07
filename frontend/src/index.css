@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-  height: 100%;
+body {
+  color: #333;
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
 }
 
 .colppy-primary {
@@ -15,16 +18,4 @@ html, body, #root {
   margin: 0 auto;
   width: 72px;
   background-color: #6633CC;
-}
-
-body {
-  color: #333;
-  text-decoration: none;
-  font-family: 'Nunito Sans', sans-serif;
-  font-style: normal;
-}
-
-button {
-  background-color: #6633CC;
-  color: #fff;
 }

@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/metrics", (req, res) => {
-  const metricsArray = generateMetrics(20);
+  const metricsArray = generateMetrics(req.query.days);
   res.json(metricsArray);
 });
 

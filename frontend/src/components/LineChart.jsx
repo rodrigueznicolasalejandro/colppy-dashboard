@@ -9,7 +9,7 @@ export default function LineChart({ data, dataKey, labelFormatter }) {
           <XAxis dataKey="ts" tickFormatter={labelFormatter} />
           <YAxis />
           <Tooltip labelFormatter={labelFormatter} />
-          <Line type="monotone" dataKey={dataKey} stroke="#8884d8" dot={false} isAnimationActive={false} />
+          <Line type="monotone" dataKey={dataKey} stroke="#6633CC" dot={false} isAnimationActive={false} />
         </RCLineChart>
       </ResponsiveContainer>
     </div>
