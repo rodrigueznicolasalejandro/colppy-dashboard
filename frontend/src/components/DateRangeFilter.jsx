@@ -21,15 +21,12 @@ export default function DateRangeFilter() {
           Últimos {opt} días
         </button>
       ))}
-
-      {days !== 30 && (
-        <button
-          onClick={resetFilter}
-          className="px-3 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 ml-2"
-        >
-          Reset
-        </button>
-      )}
+      <button
+        onClick={resetFilter}
+        className="px-3 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 ml-2"
+      >
+        Resetear
+      </button>
     </div>
   )
 }
