@@ -7,26 +7,21 @@ html, body, #root {
 }
 
 .colppy-primary {
-  background-color: #6633CC;
-  margin: 0 auto;
   background: linear-gradient(90deg, #63c, #7d42e6 50%, #a15bff) !important;
 }
 
-.header-primary {
-  color: #fff;
+.line-divider {
+  height: 4px;
+  margin: 0 auto;
+  width: 72px;
+  background-color: #6633CC;
 }
 
-h1, h2, h3, h4, h5 {
-  font-size: 60px;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-p {
+body {
+  color: #333;
+  text-decoration: none;
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
 }
 
 button {
