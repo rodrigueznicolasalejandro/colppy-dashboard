@@ -2,9 +2,11 @@
 
 ## Instrucciones
 
-Repositorio: https://github.com/rodrigueznicolasalejandro/colppy-dashboard
-URL Frontend: https://colppy-dashboard-wimo.vercel.app
-URL API: https://colppy-dashboard-gn8g.vercel.app
+**Repositorio:** https://github.com/rodrigueznicolasalejandro/colppy-dashboard.
+
+**URL Frontend:** https://colppy-dashboard-wimo.vercel.app.
+
+**URL API:** https://colppy-dashboard-gn8g.vercel.app.
 
 ---
 
