@@ -14,7 +14,7 @@ export default function DateRangeFilter() {
           onClick={() => setDays(opt)}
           className={`px-4 py-2 rounded-lg border transition-all ${
             days === opt
-              ? 'bg-brand-primary border-brand-primary'
+              ? 'button-selected'
               : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
           }`}
         >

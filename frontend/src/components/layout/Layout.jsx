@@ -5,8 +5,15 @@ export default function Layout() {
   return (
     <div className="min-h-screen bg-gray-50">
         <header className="colppy-primary mx-auto">
-            <div className="max-w-6xl mx-auto flex items-center pt-6 pb-6 ml-4 mr-4">
-            <img src="https://colppy.com/hubfs/Sistema%20de%20gesti%C3%B3n%20contable.svg" height="25" width="120" alt="Sistema de gestión contable" title="Sistema de gestión contable" />        
+            <div className="max-w-6xl mx-auto flex items-center pt-6 pb-6">
+            <img
+              src="https://colppy.com/hubfs/Sistema%20de%20gesti%C3%B3n%20contable.svg"
+              height="25"
+              width="120"
+              alt="Sistema de gestión contable"
+              title="Sistema de gestión contable"
+              className="ml-4 mr-r"
+              />        
             </div>
         </header>
         <div className="max-w-6xl mx-auto">

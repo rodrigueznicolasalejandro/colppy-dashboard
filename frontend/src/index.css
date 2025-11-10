@@ -19,3 +19,9 @@ body {
   width: 72px;
   background-color: #6633CC;
 }
+
+.button-selected {
+  color: #fff;
+  cursor: default;
+  background-color: #6633CC;
+}

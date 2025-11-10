@@ -5,8 +5,8 @@ export default function KpiCard({ title, value, prefix, suffix, warning }) {
     <div
       className={`p-4 rounded-2xl shadow-sm flex flex-col justify-between transition-all ${
         warning
-          ? 'ring-2 ring-brand-alert/60 bg-brand-alert/10'
-          : 'bg-white hover:shadow-md'
+          ? 'bg-red-100 text-red-800'
+          : 'bg-white'
       }`}
     >
       <div className="text-sm font-medium text-gray-600">{title}</div>

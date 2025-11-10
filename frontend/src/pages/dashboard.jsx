@@ -35,7 +35,7 @@ export default function Dashboard() {
   usePolling(update, 5000)
 
   const churnWarning = useMemo(() => kpis.churn > 5, [kpis.churn])
-  const seriesForChart = useMemo(() => series.map(s => ({ ...s, ts: new Date(s.ts).toDateString() })), [series])
+  const seriesForChart = useMemo(() => series.map(s => ({ ...s, ts: new Date(s.ts).toLocaleDateString("es-ES") })), [series])
 
   return (
     <main className="max-w-6xl mx-auto grid gap-4">
