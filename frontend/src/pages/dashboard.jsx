@@ -18,7 +18,8 @@ export default function Dashboard() {
 
   const { days } = useFilter()
 
-  const update = useCallback(async () => { // Deja en meomria la función para que no se vuelva a crear en cada render
+  // Es un Hook de React que te permite almacenar la definición de una función entre renderizados subsecuentes.
+  const update = useCallback(async () => {
     setError(null)
     try {
       const { series: newSeries } = await fetchMetrics(days)
@@ -34,6 +35,7 @@ export default function Dashboard() {
 
   usePolling(update, 5000)
 
+  // Es un Hook de React que te permite guardar en caché el resultado de un cálculo entre renderizados.
   const churnWarning = useMemo(() => kpis.churn > 5, [kpis.churn])
   const seriesForChart = useMemo(() => series.map(s => ({ ...s, ts: new Date(s.ts).toLocaleDateString("es-ES") })), [series])
 

@@ -1,2 +1,8 @@
+# Dependencies
 /node_modules
+
+# Local enviroment
 .env.*
+
+# Test
+/coverage

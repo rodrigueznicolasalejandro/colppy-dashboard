@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 
 export default function usePolling(callback, intervalMs) {
-  const cbRef = useRef(callback) // useRef guarda una referencia al callback actual, sin causar re-render
+  // useRef guarda una referencia al callback actual, sin causar re-render
+  const cbRef = useRef(callback)
   useEffect(() => { cbRef.current = callback }, [callback])
 
   useEffect(() => { // Si el callback cambia, actualizamos la referencia
