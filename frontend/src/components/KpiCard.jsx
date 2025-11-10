@@ -1,4 +1,5 @@
 import React from 'react';
+import { TriangleAlert } from 'lucide-react';
 
 export default function KpiCard({ title, value, prefix, suffix, warning }) {
   return (
@@ -11,11 +12,10 @@ export default function KpiCard({ title, value, prefix, suffix, warning }) {
     >
       <div className="text-sm font-medium text-gray-600">{title}</div>
       <div
-        className={`text-2xl font-semibold mt-2 ${
-          warning ? 'text-brand-alert' : 'text-brand-primary'
-        }`}
+        className="text-2xl font-semibold mt-2"
       >
         {`${prefix ? `${prefix} ` : ''}${value}${suffix ? `${suffix} ` : ''}`}
+        { warning && <TriangleAlert className="inline text-red-800" size={22} /> }
       </div>
     </div>
   );
