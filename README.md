@@ -1,5 +1,13 @@
 # 🖥️ Challenge Frontend Senior – Dashboard Analítico
 
+## Instrucciones
+
+Repositorio: https://github.com/rodrigueznicolasalejandro/colppy-dashboard
+URL Frontend: https://colppy-dashboard-wimo.vercel.app
+URL API: https://colppy-dashboard-gn8g.vercel.app
+
+---
+
 ## Contexto
 
 En Colppy queremos evaluar tus habilidades como **Frontend Developer Senior**.  
